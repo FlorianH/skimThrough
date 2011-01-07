@@ -1,0 +1,68 @@
+-- What? --
+
+The jQuery skimThrough plugin lets you create a simple image gallery to enable your users to skim through a set of images very quickly. When the user moves his/her cursor horizontally over his/her browser window, one of the images will be displayed.
+
+You can have a look at the demo: http://florianherlings.de/files/skimthrough/
+
+-- How? --
+
+To use the library, just use the provided html file as a template OR: create a new div container, that holds your set of images:
+
+  <div id="container">
+    <img src="img_01.jpg" alt="" />
+    <img src="img_02.jpg" alt="" />
+    <img src="img_03.jpg" alt="" />
+  </div>
+
+
+Make sure, that you add the css codes to your css file:
+
+  .bg       { position: fixed; top: 0; left: 0; }
+  .bgwidth  { width: 100%; }
+  .bgheight { height: 100%; }
+
+
+After that, you just include jquery and the skimThrough plugin:
+
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="skimThrough.js"></script>
+
+
+Last step is to activate the plugin:
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      $('#container').skimThrough();
+
+    });
+  </script>
+
+
+-- Configuration --
+
+The plugin has two configuration options: The duration of animation and the container that will hold the information about the currently displayed image. Both are optional.
+
+  $('#container').skimThrough({
+    'duration': 500,
+    'counter_element': '#current_page'
+  });
+
+
+-- Projects and license --
+
+This plugin uses "imagesLoaded" by Paul Irish (https://github.com/paulirish). The images in the example html file are picked from flickr. Have a look at them:
+
+ * http://www.flickr.com/photos/54973802@N00/273110527/
+ * http://www.flickr.com/photos/neilspicys/2348881979/
+ * http://www.flickr.com/photos/zoutedrop/3055849607/
+ * http://www.flickr.com/photos/kurlvink/1447789754/
+ * http://www.flickr.com/photos/syder/2843518473/
+
+
+This plugin is licensed under the MIT license:
+
+Copyright (c) 2011 Florian Herlings
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
