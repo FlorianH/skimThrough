@@ -1,3 +1,6 @@
+! Warning: This code is very old and has not been maintained for a long time.
+You probably do not want to use this anymore.
+
 -- What? --
 
 The jQuery skimThrough plugin lets you create a simple image gallery to enable your users to skim through a set of images very quickly. When the user moves his/her cursor horizontally over his/her browser window, one of the images will be displayed.
