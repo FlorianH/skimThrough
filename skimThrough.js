@@ -57,14 +57,16 @@
         var old_image = images[displayed_part],
             new_image = images[current_part];
 
-        images.css('z-index', '-3')
-        $(old_image).css('z-index', '-2')
+        images.css('z-index', '-3');
+        $(old_image).css('z-index', '-2');
         $(new_image).hide().css('z-index', '-1').stop(true, true).fadeIn(fade_duration);
 
         displayed_part = current_part;
 
         if (counter_element && $(counter_element))
+        {
           $(counter_element).html( (displayed_part+1) + '/' + num_images);
+        }
       }
     }
 
